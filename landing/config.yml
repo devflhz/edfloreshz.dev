@@ -1,0 +1,68 @@
+baseURL: https://blog.edfloreshz.dev
+languageCode: en-us
+paginate: 5
+title: edfloreshz
+
+theme: "PaperMod"
+
+params:
+  cover: { image: images/profile/header.png, relative: false }
+  twittercover: { image: images/profile/cover.png, relative: false }
+  description: I write about my professional career 🦀
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Eduardo Flores
+    subtitle: "Ingeniero de Software 🦀"
+    imageUrl: images/profile/profile.jpg
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: profile
+    buttons:
+      - name: Blog
+        url: https://blog.edfloreshz.dev
+      - name: Curriculum
+        url: https://cv.edfloreshz.dev
+  ShowPostNavLinks: true
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  disableSpecial1stPost: false
+  comments: false
+  hidemeta: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    favicon: "images/favicon/favicon.png"
+    favicon16x16: "images/favicon/favicon.png"
+    favicon32x32: "images/favicon/favicon.png"
+    apple_touch_icon: "images/favicon/favicon.png"
+    safari_pinned_tab: "images/favicon/favicon.png"
+
+  params:
+    fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      keys: ["title", "permalink", "summary", "content"]
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/edfloreshz"
+    - name: telegram
+      url: "https://t.me/edfloreshz"
+    - name: github
+      url: "https://github.com/edfloreshz"
+    - name: email
+      url: "mailto:edfloreshz@gmail.com"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
