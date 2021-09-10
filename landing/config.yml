@@ -22,6 +22,10 @@ params:
         url: https://blog.edfloreshz.dev
       - name: Curriculum
         url: https://cv.edfloreshz.dev
+      - name: Sensei
+        url: https://sensei.edfloreshz.dev
+      - name: DevLand
+        url: https://devland.edfloreshz.dev
   ShowPostNavLinks: true
   defaultTheme: auto # dark, light
   disableThemeToggle: false
