@@ -1,46 +1,70 @@
 .buttons,
 .main .profile {
-    display: flex;
-    justify-content: center
+  display: flex;
+  justify-content: center;
 }
 
 .main .profile {
-    position: absolute;
-    left: 0;
-    right: 0;
-    align-items: center;
-    height: 80%;
-    text-align: center
+  position: absolute;
+  left: 0;
+  right: 0;
+  align-items: center;
+  height: 80%;
+  text-align: center;
 }
 
 .profile .profile_inner h1 {
-    padding: 12px 0
+  padding: 12px 0;
+}
+
+.profile_inner {
+  padding-top: 100px;
 }
 
 .profile img {
-    display: inline-table;
-    border-radius: 50%;
-    pointer-events: none
+  display: inline-table;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .buttons {
-    flex-wrap: wrap;
-    max-width: 400px;
-    margin: 0 auto
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .button {
-    background: var(--tertiary);
-    border-radius: var(--radius);
-    margin: 8px;
-    padding: 6px;
-    transition: transform .1s
+  background: var(--tertiary);
+  border-radius: var(--radius);
+  margin: 8px;
+  padding: 6px;
+  transition: transform 0.1s;
 }
 
 .button-inner {
-    padding: 0 8px
+  padding: 0 8px;
 }
 
 .button:active {
-    transform: scale(.96)
+  transform: scale(0.96);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+.card-header {
+  background-color: var(--entry);
+  border-color: var(--tertiary);
+}
+
+.card-body {
+  background-color: var(--theme);
+  border-color: var(--tertiary);
+}
+
+.card {
+  border-color: var(--tertiary);
+  background-color: unset;
+  min-width: 270px;
 }

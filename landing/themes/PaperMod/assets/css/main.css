@@ -43,23 +43,3 @@
 code {
   direction: ltr;
 }
-
-a:hover {
-  color: var(--secondary);
-}
-
-.card-header {
-  background-color: var(--entry);
-  border-color: var(--tertiary);
-}
-
-.card-body {
-  background-color: var(--theme);
-  border-color: var(--tertiary);
-}
-
-.card {
-  border-color: var(--tertiary);
-  background-color: unset;
-  min-width: 270px;
-}
