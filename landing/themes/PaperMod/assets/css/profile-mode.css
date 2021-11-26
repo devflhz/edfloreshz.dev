@@ -68,3 +68,7 @@ a:hover {
   background-color: unset;
   min-width: 270px;
 }
+
+.logo {
+  z-index: 1;
+}
