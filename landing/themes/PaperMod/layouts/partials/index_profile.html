@@ -7,16 +7,16 @@
         <span>{{- .subtitle | markdownify -}}</span>
         {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
         <br>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    {{- with .buttons }}
-                    <div class="card">
-                        <div class="card-header">
-                            <span>Sections</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="buttons">
+        <div class="row">
+            <div class="col">
+                {{- with .buttons }}
+                <div class="card">
+                    <div class="card-header">
+                        <span>Sections</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="buttons">
+                            <div class="roww">
                                 {{- range . -}}
                                 <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name | humanize }}">
                                     <span class="button-inner">{{ .name }}</span>
@@ -25,18 +25,20 @@
                             </div>
                         </div>
                     </div>
-                    <br>
+                </div>
+                <br>
 
-                    {{- end }}
-                </div>
-                <div class="col">
-                    {{- with .projects }}
-                    <div class="card">
-                        <div class="card-header">
-                            <span>Projects</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="buttons">
+                {{- end }}
+            </div>
+            <div class="col">
+                {{- with .projects }}
+                <div class="card">
+                    <div class="card-header">
+                        <span>Projects</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="buttons">
+                            <div class="roww">
                                 {{- range . -}}
                                 <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name | humanize }}">
                                     <span class="button-inner">{{ .name }}</span>
@@ -45,8 +47,8 @@
                             </div>
                         </div>
                     </div>
-                    {{- end }}
                 </div>
+                {{- end }}
             </div>
         </div>
     </div>
