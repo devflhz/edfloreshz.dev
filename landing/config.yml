@@ -12,7 +12,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Eduardo Flores
-    subtitle: "Ingeniero de Software 🦀"
+    subtitle: "Software Engineer 🦀"
     imageUrl: images/profile/profile.jpg
     imageWidth: 200
     imageHeight: 200
@@ -20,8 +20,10 @@ params:
     buttons:
       - name: Blog
         url: https://blog.edfloreshz.dev
-      - name: Curriculum
+      - name: CV
         url: https://cv.edfloreshz.dev
+
+    projects:
       - name: Sensei
         url: https://sensei.edfloreshz.dev
       - name: DevLand
