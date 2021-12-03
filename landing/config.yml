@@ -5,6 +5,13 @@ title: edfloreshz
 
 theme: "PaperMod"
 
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
+
 params:
   cover: { image: images/profile/header.png, relative: false }
   twittercover: { image: images/profile/cover.png, relative: false }
