@@ -1,4 +1,4 @@
-baseURL: https://blog.edfloreshz.dev
+baseURL: https://edfloreshz.dev
 languageCode: en-us
 paginate: 5
 title: edfloreshz
@@ -17,7 +17,7 @@ params:
   twittercover: { image: images/profile/cover.png, relative: false }
   description: I write about my professional career 🦀
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: true
     title: Eduardo Flores
     subtitle: "Software Engineer 🦀"
     imageUrl: images/profile/profile.jpg
