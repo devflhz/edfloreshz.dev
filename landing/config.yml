@@ -28,7 +28,7 @@ params:
       - name: Blog
         url: https://blog.edfloreshz.dev
       - name: Resume
-        url: https://cv.edfloreshz.dev
+        url: https://resume.edfloreshz.dev
 
     projects:
       - name: Sensei
