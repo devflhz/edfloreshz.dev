@@ -27,7 +27,7 @@ params:
     buttons:
       - name: Blog
         url: https://blog.edfloreshz.dev
-      - name: CV
+      - name: Resume
         url: https://cv.edfloreshz.dev
 
     projects:
