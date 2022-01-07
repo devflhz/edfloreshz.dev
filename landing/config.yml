@@ -27,14 +27,11 @@ params:
     buttons:
       - name: Blog
         url: https://blog.edfloreshz.dev
+      - name: Projects
+        url: https://edfloreshz.dev/projects
       - name: Resume
         url: https://resume.edfloreshz.dev
 
-    projects:
-      - name: Sensei
-        url: https://sensei.edfloreshz.dev
-      - name: DevLand
-        url: https://devland.edfloreshz.dev
   ShowPostNavLinks: true
   defaultTheme: auto # dark, light
   disableThemeToggle: false

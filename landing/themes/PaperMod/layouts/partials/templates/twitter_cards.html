@@ -1,9 +1,9 @@
-{{- if .Params.twittercover.image -}}
+{{- if .Params.cover.image -}}
 <meta name="twitter:card" content="summary_large_image" />
-{{- if (ne $.Params.twittercover.relative true) }}
-<meta name="twitter:image" content="{{ .Params.twittercover.image | absURL }}" />
+{{- if (ne $.Params.cover.relative true) }}
+<meta name="twitter:image" content="{{ .Params.cover.image | absURL }}" />
 {{- else }}
-<meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.twittercover.image ) | absURL }}" />
+<meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
 {{- end}}
 {{- else }}
 {{- with $.Params.images -}}
@@ -12,7 +12,7 @@
 {{ else -}}
 {{- $images := $.Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
-{{- if not $featured }}{{ $featured = $images.GetMatch "{*twittercover*,*thumbnail*}" }}{{ end -}}
+{{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
 {{- with $featured -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
@@ -30,9 +30,4 @@
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
 {{ with .Site.Social.twitter -}}
 <meta name="twitter:site" content="@{{ . }}"/>
-{{ end -}}
-{{ range .Site.Authors }}
-{{ with .twitter -}}
-<meta name="twitter:creator" content="@{{ . }}"/>
-{{ end -}}
 {{ end -}}
