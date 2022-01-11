@@ -7,10 +7,15 @@ theme: "PaperMod"
 
 menu:
   main:
+    - identifier: posts
+      name: Posts
+      url: https://blog.edfloreshz.dev/articles
+      weight: 1
     - identifier: about
-      name: about
+      name: About
       url: /about/
-      weight: 10
+      weight: 2
+   
 
 params:
   cover: { image: images/profile/header.png, relative: false }
@@ -37,7 +42,7 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   disableSpecial1stPost: false
   comments: false
   hidemeta: false
