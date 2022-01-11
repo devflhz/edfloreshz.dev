@@ -5,7 +5,7 @@ summary: "About me page"
 
 ## Hello! 👋🏽
 
-My name is **Eddy**, I'm a software engineer currently living in Mexico 🇲🇽. 
+My name is **Eduardo**, I’m a software engineer based in Mexico 🇲🇽
 
 My main interests are **system architecture**, **software development**, **Linux**, and **open source**.
 
