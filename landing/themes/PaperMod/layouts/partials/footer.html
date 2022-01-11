@@ -3,8 +3,7 @@
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>&copy; {{ now.Year }} Created by <a href="{{ "https://github.com/edfloreshz" | absLangURL }}">{{ .Site.Title }}</a></span>
-    {{- end }}
+    <span>&copy; {{ now.Year }} <span>&middot;</span> Created by <a href="{{ "https://edfloreshz.dev" | absLangURL }}">Eduardo Flores</a></span>    {{- end }}
 </footer>
 {{- end }}
 
