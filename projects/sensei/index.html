@@ -1,123 +1,20 @@
-<!doctype html><html lang=en dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
-<title>Sensei | edfloreshz</title>
-<meta name=keywords content>
-<meta name=description content="Sensei is a simple command line tool to open documentation for any crate.">
-<meta name=author content>
-<link rel=canonical href=https://edfloreshz.dev/projects/sensei/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=icon type=image/png sizes=16x16 href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=apple-touch-icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=mask-icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.91.2">
-<noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript><meta property="og:title" content="Sensei">
-<meta property="og:description" content="Sensei is a simple command line tool to open documentation for any crate.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://edfloreshz.dev/projects/sensei/">
-<meta property="og:image" content="https://edfloreshz.dev/images/profile/projects/sensei.png"><meta property="article:section" content="projects">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://edfloreshz.dev/images/profile/projects/sensei.png">
-<meta name=twitter:title content="Sensei">
-<meta name=twitter:description content="Sensei is a simple command line tool to open documentation for any crate.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Projects","item":"https://edfloreshz.dev/projects/"},{"@type":"ListItem","position":3,"name":"Sensei","item":"https://edfloreshz.dev/projects/sensei/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Sensei","name":"Sensei","description":"Sensei is a simple command line tool to open documentation for any crate.","keywords":[],"articleBody":"Installation Cargo cargo install sensei Arch Linux paru -S sensei Usage sns crate [OPTIONS] [FLAGS] Options -v, --version  Opens documentation for a specific version. -q, --query  Specifies query to search documentation. Flags -h, --help Prints help information -l, --local Tries to open local documentation. -m, --manifest Looks up the version in Cargo.toml Examples Opening documentation for a crate. sns rand Opening local documentation for a crate. sns rand -l sns rand --local Specifying a version. sns rand -v 0.7.2 sns rand --version 0.7.2 Getting version from Cargo.toml sns rand --manifest sns rand -m Sending a query. sns rand -q Rng sns rand --query Rng ","wordCount":"106","inLanguage":"en","image":"https://edfloreshz.dev/images/profile/projects/sensei.png","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://edfloreshz.dev/projects/sensei/"},"publisher":{"@type":"Organization","name":"edfloreshz","logo":{"@type":"ImageObject","url":"https://edfloreshz.dev/images/favicon/favicon.png"}}}</script>
-</head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://edfloreshz.dev accesskey=h title="edfloreshz (Alt + H)">edfloreshz</a>
-<span class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-</span>
-</div>
-<ul id=menu>
-<li>
-<a href=https://blog.edfloreshz.dev/articles title=Posts>
-<span>Posts</span>
-</a>
-</li>
-<li>
-<a href=https://edfloreshz.dev/about/ title=About>
-<span>About</span>
-</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class=main>
-<article class=post-single>
-<header class=post-header>
-<h1 class=post-title>
-Sensei
-</h1>
-<div class=post-meta>1 min
-</div>
-</header>
-<figure class=entry-cover><img loading=lazy src=https://edfloreshz.dev/images/profile/projects/sensei.png alt=Sensei>
-</figure>
-<div class=post-content><h2 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h2>
-<h4 id=cargo>Cargo<a hidden class=anchor aria-hidden=true href=#cargo>#</a></h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>cargo install sensei
-</code></pre></div><h4 id=arch-linux>Arch Linux<a hidden class=anchor aria-hidden=true href=#arch-linux>#</a></h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>paru <span style=color:#f92672>-</span>S sensei
-</code></pre></div><h2 id=usage>Usage<a hidden class=anchor aria-hidden=true href=#usage>#</a></h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns <span style=color:#f92672>&lt;</span><span style=color:#66d9ef>crate</span><span style=color:#f92672>&gt;</span> [OPTIONS] [FLAGS]
-</code></pre></div><h3 id=options>Options<a hidden class=anchor aria-hidden=true href=#options>#</a></h3>
-<pre tabindex=0><code>-v, --version &lt;version&gt;    Opens documentation for a specific version.
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Sensei | edfloreshz</title><meta name=keywords content><meta name=description content="Sensei is a simple command line tool to open documentation for any crate."><meta name=author content><link rel=canonical href=https://edfloreshz.dev/projects/sensei/><link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=icon type=image/png sizes=16x16 href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=icon type=image/png sizes=32x32 href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=apple-touch-icon href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=mask-icon href=https://edfloreshz.dev/images/favicon/favicon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.97.3"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Sensei"><meta property="og:description" content="Sensei is a simple command line tool to open documentation for any crate."><meta property="og:type" content="article"><meta property="og:url" content="https://edfloreshz.dev/projects/sensei/"><meta property="og:image" content="https://edfloreshz.dev/images/profile/projects/sensei.png"><meta property="article:section" content="projects"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://edfloreshz.dev/images/profile/projects/sensei.png"><meta name=twitter:title content="Sensei"><meta name=twitter:description content="Sensei is a simple command line tool to open documentation for any crate."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Projects","item":"https://edfloreshz.dev/projects/"},{"@type":"ListItem","position":3,"name":"Sensei","item":"https://edfloreshz.dev/projects/sensei/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Sensei","name":"Sensei","description":"Sensei is a simple command line tool to open documentation for any crate.","keywords":[],"articleBody":"Installation Cargo cargo install sensei Arch Linux paru -S sensei Usage sns crate [OPTIONS] [FLAGS] Options -v, --version  Opens documentation for a specific version. -q, --query  Specifies query to search documentation. Flags -h, --help Prints help information -l, --local Tries to open local documentation. -m, --manifest Looks up the version in Cargo.toml Examples Opening documentation for a crate. sns rand Opening local documentation for a crate. sns rand -l sns rand --local Specifying a version. sns rand -v 0.7.2 sns rand --version 0.7.2 Getting version from Cargo.toml sns rand --manifest sns rand -m Sending a query. sns rand -q Rng sns rand --query Rng ","wordCount":"106","inLanguage":"en","image":"https://edfloreshz.dev/images/profile/projects/sensei.png","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://edfloreshz.dev/projects/sensei/"},"publisher":{"@type":"Organization","name":"edfloreshz","logo":{"@type":"ImageObject","url":"https://edfloreshz.dev/images/favicon/favicon.png"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://edfloreshz.dev accesskey=h title="edfloreshz (Alt + H)">edfloreshz</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://blog.edfloreshz.dev/articles title=Posts><span>Posts</span></a></li><li><a href=https://edfloreshz.dev/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Sensei</h1><div class=post-meta>1 min</div></header><figure class=entry-cover><img loading=lazy src=https://edfloreshz.dev/images/profile/projects/sensei.png alt=Sensei></figure><div class=post-content><h2 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h2><h4 id=cargo>Cargo<a hidden class=anchor aria-hidden=true href=#cargo>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>cargo install sensei
+</span></span></code></pre></div><h4 id=arch-linux>Arch Linux<a hidden class=anchor aria-hidden=true href=#arch-linux>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>paru <span style=color:#f92672>-</span>S sensei
+</span></span></code></pre></div><h2 id=usage>Usage<a hidden class=anchor aria-hidden=true href=#usage>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns <span style=color:#f92672>&lt;</span><span style=color:#66d9ef>crate</span><span style=color:#f92672>&gt;</span> [OPTIONS] [FLAGS]
+</span></span></code></pre></div><h3 id=options>Options<a hidden class=anchor aria-hidden=true href=#options>#</a></h3><pre tabindex=0><code>-v, --version &lt;version&gt;    Opens documentation for a specific version.
 -q, --query &lt;query&gt;      Specifies query to search documentation.
-</code></pre><h3 id=flags>Flags<a hidden class=anchor aria-hidden=true href=#flags>#</a></h3>
-<pre tabindex=0><code>-h, --help      Prints help information
+</code></pre><h3 id=flags>Flags<a hidden class=anchor aria-hidden=true href=#flags>#</a></h3><pre tabindex=0><code>-h, --help      Prints help information
 -l, --local    Tries to open local documentation.
 -m, --manifest  Looks up the version in Cargo.toml
-</code></pre><h3 id=examples>Examples<a hidden class=anchor aria-hidden=true href=#examples>#</a></h3>
-<h5 id=opening-documentation-for-a-crate>Opening documentation for a crate.<a hidden class=anchor aria-hidden=true href=#opening-documentation-for-a-crate>#</a></h5>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns rand
-</code></pre></div><h5 id=opening-local-documentation-for-a-crate>Opening local documentation for a crate.<a hidden class=anchor aria-hidden=true href=#opening-local-documentation-for-a-crate>#</a></h5>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns rand <span style=color:#f92672>-</span>l
-sns rand <span style=color:#f92672>--</span>local
-</code></pre></div><h5 id=specifying-a-version>Specifying a version.<a hidden class=anchor aria-hidden=true href=#specifying-a-version>#</a></h5>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns rand <span style=color:#f92672>-</span>v <span style=color:#ae81ff>0.7.2</span>
-sns rand <span style=color:#f92672>--</span>version <span style=color:#ae81ff>0.7.2</span>
-</code></pre></div><h5 id=getting-version-from-cargotoml>Getting version from Cargo.toml<a hidden class=anchor aria-hidden=true href=#getting-version-from-cargotoml>#</a></h5>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns rand <span style=color:#f92672>--</span>manifest
-sns rand <span style=color:#f92672>-</span>m
-</code></pre></div><h5 id=sending-a-query>Sending a query.<a hidden class=anchor aria-hidden=true href=#sending-a-query>#</a></h5>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust>sns rand <span style=color:#f92672>-</span>q Rng
-sns rand <span style=color:#f92672>--</span>query Rng
-</code></pre></div>
-</div>
-<footer class=post-footer>
-<nav class=paginav>
-<a class=prev href=https://edfloreshz.dev/projects/devmode/>
-<span class=title>« Prev Page</span>
-<br>
-<span>Dev(mode)</span>
-</a>
-</nav>
-</footer>
-</article>
-</main>
-<footer class=footer>
-<span>&copy; 2022 <span>&#183;</span> Created by <a href=https://github.com/edfloreshz>Eduardo Flores</a></span>
-</footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a>
-<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+</code></pre><h3 id=examples>Examples<a hidden class=anchor aria-hidden=true href=#examples>#</a></h3><h5 id=opening-documentation-for-a-crate>Opening documentation for a crate.<a hidden class=anchor aria-hidden=true href=#opening-documentation-for-a-crate>#</a></h5><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns rand
+</span></span></code></pre></div><h5 id=opening-local-documentation-for-a-crate>Opening local documentation for a crate.<a hidden class=anchor aria-hidden=true href=#opening-local-documentation-for-a-crate>#</a></h5><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns rand <span style=color:#f92672>-</span>l
+</span></span><span style=display:flex><span>sns rand <span style=color:#f92672>--</span>local
+</span></span></code></pre></div><h5 id=specifying-a-version>Specifying a version.<a hidden class=anchor aria-hidden=true href=#specifying-a-version>#</a></h5><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns rand <span style=color:#f92672>-</span>v <span style=color:#ae81ff>0.7.2</span>
+</span></span><span style=display:flex><span>sns rand <span style=color:#f92672>--</span>version <span style=color:#ae81ff>0.7.2</span>
+</span></span></code></pre></div><h5 id=getting-version-from-cargotoml>Getting version from Cargo.toml<a hidden class=anchor aria-hidden=true href=#getting-version-from-cargotoml>#</a></h5><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns rand <span style=color:#f92672>--</span>manifest
+</span></span><span style=display:flex><span>sns rand <span style=color:#f92672>-</span>m
+</span></span></code></pre></div><h5 id=sending-a-query>Sending a query.<a hidden class=anchor aria-hidden=true href=#sending-a-query>#</a></h5><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-rust data-lang=rust><span style=display:flex><span>sns rand <span style=color:#f92672>-</span>q Rng
+</span></span><span style=display:flex><span>sns rand <span style=color:#f92672>--</span>query Rng
+</span></span></code></pre></div></div><footer class=post-footer><nav class=paginav><a class=prev href=https://edfloreshz.dev/projects/devmode/><span class=title>« Prev Page</span><br><span>Dev(mode)</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2022 <span>&#183;</span> Created by <a href=https://github.com/edfloreshz>Eduardo Flores</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

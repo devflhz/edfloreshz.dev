@@ -1,75 +1,6 @@
-<!doctype html><html lang=en dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
-<title>Dev(mode) | edfloreshz</title>
-<meta name=keywords content>
-<meta name=description content="Dev(mode) is a project management utility for developers.">
-<meta name=author content>
-<link rel=canonical href=https://edfloreshz.dev/projects/devmode/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=icon type=image/png sizes=16x16 href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=apple-touch-icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<link rel=mask-icon href=https://edfloreshz.dev/images/favicon/favicon.png>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.91.2">
-<noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript><meta property="og:title" content="Dev(mode)">
-<meta property="og:description" content="Dev(mode) is a project management utility for developers.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://edfloreshz.dev/projects/devmode/">
-<meta property="og:image" content="https://edfloreshz.dev/images/profile/projects/devmode.png"><meta property="article:section" content="projects">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://edfloreshz.dev/images/profile/projects/devmode.png">
-<meta name=twitter:title content="Dev(mode)">
-<meta name=twitter:description content="Dev(mode) is a project management utility for developers.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Projects","item":"https://edfloreshz.dev/projects/"},{"@type":"ListItem","position":3,"name":"Dev(mode)","item":"https://edfloreshz.dev/projects/devmode/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Dev(mode)","name":"Dev(mode)","description":"Dev(mode) is a project management utility for developers.","keywords":[],"articleBody":"USAGE: dm [SUBCOMMAND] FLAGS: -h, --help Prints help information -V, --version Prints version information SUBCOMMANDS: clone Clones a utils repository in a specific folder structure. config Sets options for configuration. fork Clone repo and set upstream to your fork help Prints this message or the help of the given subcommand(s) open Opens a project on your selected text editor. Installation Cargo cargo install devmode Arch Linux paru -S devmode-git Configuration The config or cf command will help you configure dm to your liking.\nText Editor You can set your favorite text editor running:\n dm config -e --editor Git Host You can set your Git host running:\n dm config -h --host Git User You can set your Git user running:\n dm config -o --owner Configure everything You can configure everything running:\n dm config -a --all Show config You can show your current config running:\n dm config -s --show Current settings: Host: GitHub Owner: edfloreshz Editor: Visual Studio Code Clone a repo Dev(mode) facilitates repository storage and organization in your filesystem.\nHow it works When you clone a repository it will be stored to your filesystem using a specific folder structure.\nYou can also use  dm cl\n$HOME └── Developer └── host └── owner └── repo This makes it easier for you to find repositories and allows dm to open them by just specifying the name of the project.\nUsage USAGE: dm clone ... FLAGS: -h, --help Prints help information -V, --version Prints version information ARGS: ... Provide either a Git  or a Git   . Clone by URL dm clone https://github.com/edfloreshz/devmode Clone without URL dm clone    Clone with config.toml Running  dm config asks you to specify your Git host and user, now just type one of your repos.\ndm clone  You can also clone multiple of your own repositories while using this option.\ndm clone   Just clone You can clone without specifying the arguments.\ndm clone You will be presented with the following setup:\nᐅ dm clone ? Choose your Git host: › ❯ GitHub GitLab ? Git username: › user ? Git repo name: › repo Cloning edfloreshz/blog from GitHub... Clone and set upstream (fork) Clone a repo and set upstream, ideal for forks, when you clone a repository it will be stored to your filesystem using a specific folder structure. Similar to how  dm cl works.\nUsage  dm fork --upstream  [args]... FLAGS: -h, --help Prints help information -V, --version Prints version information OPTIONS: -u, --upstream  Set the upstream to your fork  ARGS: ... Provide either a Git  or a Git   . Clone with url Use the --upstream or -u to set the upstream repository, then specify the repository that you wish to modify.\n dm fork --upstream https://github.com/user/repo https://github.com/your-user/your-repo-fork Clone with upstream URL and remaining parameters.  dm fk github    -u  Just clone with the upstream URL This will launch a clone setup and guide you throught the cloning process.\n dm fork -u https://github.com/user/repo ? Choose your Git host: › ❯ GitHub GitLab ? Git username: › your-user ? Git repo name: › your-repo-fork Cloning your-user/your-repo-fork from GitHub... Setting https://github.com/user/repo how upstream Open a project Opens a project with your selected text editor.\nYou can also use  dm o\nUSAGE: dm open  FLAGS: -h, --help Prints help information -V, --version Prints version information ARGS:  Provide a project name. You can open a project with the following command:\ndm open  If two or more projects with the same name are found, you will have to choose which one to open.\nProposals If you have a proposal for a new feature, open a new issue.\n","wordCount":"613","inLanguage":"en","image":"https://edfloreshz.dev/images/profile/projects/devmode.png","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://edfloreshz.dev/projects/devmode/"},"publisher":{"@type":"Organization","name":"edfloreshz","logo":{"@type":"ImageObject","url":"https://edfloreshz.dev/images/favicon/favicon.png"}}}</script>
-</head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://edfloreshz.dev accesskey=h title="edfloreshz (Alt + H)">edfloreshz</a>
-<span class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-</span>
-</div>
-<ul id=menu>
-<li>
-<a href=https://blog.edfloreshz.dev/articles title=Posts>
-<span>Posts</span>
-</a>
-</li>
-<li>
-<a href=https://edfloreshz.dev/about/ title=About>
-<span>About</span>
-</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class=main>
-<article class=post-single>
-<header class=post-header>
-<h1 class=post-title>
-Dev(mode)
-</h1>
-<div class=post-meta>3 min
-</div>
-</header>
-<figure class=entry-cover><img loading=lazy src=https://edfloreshz.dev/images/profile/projects/devmode.png alt=Sensei>
-</figure>
-<div class=post-content><pre tabindex=0><code>USAGE:
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Dev(mode) | edfloreshz</title><meta name=keywords content><meta name=description content="Dev(mode) is a project management utility for developers."><meta name=author content><link rel=canonical href=https://edfloreshz.dev/projects/devmode/><link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=icon type=image/png sizes=16x16 href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=icon type=image/png sizes=32x32 href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=apple-touch-icon href=https://edfloreshz.dev/images/favicon/favicon.png><link rel=mask-icon href=https://edfloreshz.dev/images/favicon/favicon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.97.3"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Dev(mode)"><meta property="og:description" content="Dev(mode) is a project management utility for developers."><meta property="og:type" content="article"><meta property="og:url" content="https://edfloreshz.dev/projects/devmode/"><meta property="og:image" content="https://edfloreshz.dev/images/profile/projects/devmode.png"><meta property="article:section" content="projects"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://edfloreshz.dev/images/profile/projects/devmode.png"><meta name=twitter:title content="Dev(mode)"><meta name=twitter:description content="Dev(mode) is a project management utility for developers."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Projects","item":"https://edfloreshz.dev/projects/"},{"@type":"ListItem","position":3,"name":"Dev(mode)","item":"https://edfloreshz.dev/projects/devmode/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Dev(mode)","name":"Dev(mode)","description":"Dev(mode) is a project management utility for developers.","keywords":[],"articleBody":"USAGE: dm [SUBCOMMAND] FLAGS: -h, --help Prints help information -V, --version Prints version information SUBCOMMANDS: clone Clones a utils repository in a specific folder structure. config Sets options for configuration. fork Clone repo and set upstream to your fork help Prints this message or the help of the given subcommand(s) open Opens a project on your selected text editor. Installation Cargo cargo install devmode Arch Linux paru -S devmode-git Configuration The config or cf command will help you configure dm to your liking.\nText Editor You can set your favorite text editor running:\n dm config -e --editor Git Host You can set your Git host running:\n dm config -h --host Git User You can set your Git user running:\n dm config -o --owner Configure everything You can configure everything running:\n dm config -a --all Show config You can show your current config running:\n dm config -s --show Current settings: Host: GitHub Owner: edfloreshz Editor: Visual Studio Code Clone a repo Dev(mode) facilitates repository storage and organization in your filesystem.\nHow it works When you clone a repository it will be stored to your filesystem using a specific folder structure.\nYou can also use  dm cl\n$HOME └── Developer └── host └── owner └── repo This makes it easier for you to find repositories and allows dm to open them by just specifying the name of the project.\nUsage USAGE: dm clone ... FLAGS: -h, --help Prints help information -V, --version Prints version information ARGS: ... Provide either a Git  or a Git   . Clone by URL  dm clone https://github.com/edfloreshz/devmode Clone without URL  dm clone    Clone with config.toml Running  dm config asks you to specify your Git host and user, now just type one of your repos.\n dm clone  You can also clone multiple of your own repositories while using this option.\n dm clone   Just clone You can clone without specifying the arguments.\n dm clone You will be presented with the following setup:\nᐅ dm clone ? Choose your Git host: › ❯ GitHub GitLab ? Git username: › user ? Git repo name: › repo Cloning edfloreshz/blog from GitHub... Clone and set upstream (fork) Clone a repo and set upstream, ideal for forks, when you clone a repository it will be stored to your filesystem using a specific folder structure. Similar to how  dm cl works.\nUsage  dm fork --upstream  [args]... FLAGS: -h, --help Prints help information -V, --version Prints version information OPTIONS: -u, --upstream  Set the upstream to your fork  ARGS: ... Provide either a Git  or a Git   . Clone with url Use the --upstream or -u to set the upstream repository, then specify the repository that you wish to modify.\n dm fork --upstream https://github.com/user/repo https://github.com/your-user/your-repo-fork Clone with upstream URL and remaining parameters.  dm fk github    -u  Just clone with the upstream URL This will launch a clone setup and guide you throught the cloning process.\n dm fork -u https://github.com/user/repo ? Choose your Git host: › ❯ GitHub GitLab ? Git username: › your-user ? Git repo name: › your-repo-fork Cloning your-user/your-repo-fork from GitHub... Setting https://github.com/user/repo how upstream Open a project Opens a project with your selected text editor.\nYou can also use  dm o\nUSAGE: dm open  FLAGS: -h, --help Prints help information -V, --version Prints version information ARGS:  Provide a project name. You can open a project with the following command:\n dm open  If two or more projects with the same name are found, you will have to choose which one to open.\nProposals If you have a proposal for a new feature, open a new issue.\n","wordCount":"613","inLanguage":"en","image":"https://edfloreshz.dev/images/profile/projects/devmode.png","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://edfloreshz.dev/projects/devmode/"},"publisher":{"@type":"Organization","name":"edfloreshz","logo":{"@type":"ImageObject","url":"https://edfloreshz.dev/images/favicon/favicon.png"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://edfloreshz.dev accesskey=h title="edfloreshz (Alt + H)">edfloreshz</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://blog.edfloreshz.dev/articles title=Posts><span>Posts</span></a></li><li><a href=https://edfloreshz.dev/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Dev(mode)</h1><div class=post-meta>3 min</div></header><figure class=entry-cover><img loading=lazy src=https://edfloreshz.dev/images/profile/projects/devmode.png alt=Sensei></figure><div class=post-content><pre tabindex=0><code>USAGE:
    dm [SUBCOMMAND]
 
 FLAGS:
@@ -82,47 +13,25 @@ SUBCOMMANDS:
     fork      Clone repo and set upstream to your fork
     help      Prints this message or the help of the given subcommand(s)
     open      Opens a project on your selected text editor.
-</code></pre><h2 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h2>
-<h4 id=cargo>Cargo<a hidden class=anchor aria-hidden=true href=#cargo>#</a></h4>
-<pre tabindex=0><code>cargo install devmode
-</code></pre><h4 id=arch-linux>Arch Linux<a hidden class=anchor aria-hidden=true href=#arch-linux>#</a></h4>
-<pre tabindex=0><code>paru -S devmode-git
-</code></pre><h2 id=configuration>Configuration<a hidden class=anchor aria-hidden=true href=#configuration>#</a></h2>
-<p>The <code>config</code> or <code>cf</code> command will help you configure <code>dm</code> to your liking.</p>
-<h3 id=text-editor>Text Editor<a hidden class=anchor aria-hidden=true href=#text-editor>#</a></h3>
-<p>You can set your favorite text editor running:</p>
-<pre tabindex=0><code> dm config -e --editor
-</code></pre><h3 id=git-host>Git Host<a hidden class=anchor aria-hidden=true href=#git-host>#</a></h3>
-<p>You can set your Git host running:</p>
-<pre tabindex=0><code> dm config -h --host
-</code></pre><h3 id=git-user>Git User<a hidden class=anchor aria-hidden=true href=#git-user>#</a></h3>
-<p>You can set your Git user running:</p>
-<pre tabindex=0><code> dm config -o --owner
-</code></pre><h3 id=configure-everything>Configure everything<a hidden class=anchor aria-hidden=true href=#configure-everything>#</a></h3>
-<p>You can configure everything running:</p>
-<pre tabindex=0><code> dm config -a --all
-</code></pre><h3 id=show-config>Show config<a hidden class=anchor aria-hidden=true href=#show-config>#</a></h3>
-<p>You can show your current config running:</p>
-<pre tabindex=0><code> dm config -s --show
+</code></pre><h2 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h2><h4 id=cargo>Cargo<a hidden class=anchor aria-hidden=true href=#cargo>#</a></h4><pre tabindex=0><code>cargo install devmode
+</code></pre><h4 id=arch-linux>Arch Linux<a hidden class=anchor aria-hidden=true href=#arch-linux>#</a></h4><pre tabindex=0><code>paru -S devmode-git
+</code></pre><h2 id=configuration>Configuration<a hidden class=anchor aria-hidden=true href=#configuration>#</a></h2><p>The <code>config</code> or <code>cf</code> command will help you configure <code>dm</code> to your liking.</p><h3 id=text-editor>Text Editor<a hidden class=anchor aria-hidden=true href=#text-editor>#</a></h3><p>You can set your favorite text editor running:</p><pre tabindex=0><code> dm config -e --editor
+</code></pre><h3 id=git-host>Git Host<a hidden class=anchor aria-hidden=true href=#git-host>#</a></h3><p>You can set your Git host running:</p><pre tabindex=0><code> dm config -h --host
+</code></pre><h3 id=git-user>Git User<a hidden class=anchor aria-hidden=true href=#git-user>#</a></h3><p>You can set your Git user running:</p><pre tabindex=0><code> dm config -o --owner
+</code></pre><h3 id=configure-everything>Configure everything<a hidden class=anchor aria-hidden=true href=#configure-everything>#</a></h3><p>You can configure everything running:</p><pre tabindex=0><code> dm config -a --all
+</code></pre><h3 id=show-config>Show config<a hidden class=anchor aria-hidden=true href=#show-config>#</a></h3><p>You can show your current config running:</p><pre tabindex=0><code> dm config -s --show
 
 Current settings:
 Host: GitHub
 Owner: edfloreshz
 Editor: Visual Studio Code
-</code></pre><h2 id=clone-a-repo>Clone a repo<a hidden class=anchor aria-hidden=true href=#clone-a-repo>#</a></h2>
-<p><strong>Dev(mode)</strong> facilitates repository storage and organization in your filesystem.</p>
-<h3 id=how-it-works>How it works<a hidden class=anchor aria-hidden=true href=#how-it-works>#</a></h3>
-<p>When you clone a repository it will be stored to your filesystem using a specific folder structure.</p>
-<p>You can also use <code> dm cl</code></p>
-<pre tabindex=0><code>$HOME
+</code></pre><h2 id=clone-a-repo>Clone a repo<a hidden class=anchor aria-hidden=true href=#clone-a-repo>#</a></h2><p><strong>Dev(mode)</strong> facilitates repository storage and organization in your filesystem.</p><h3 id=how-it-works>How it works<a hidden class=anchor aria-hidden=true href=#how-it-works>#</a></h3><p>When you clone a repository it will be stored to your filesystem using a specific folder structure.</p><p>You can also use <code>dm cl</code></p><pre tabindex=0><code>$HOME
 └── Developer
     └── host
         └── owner
             └── repo
 </code></pre><p>This makes it easier for you to find repositories and allows <code>dm</code> to open them by just specifying the name of the
-project.</p>
-<h3 id=usage>Usage<a hidden class=anchor aria-hidden=true href=#usage>#</a></h3>
-<pre tabindex=0><code>USAGE:
+project.</p><h3 id=usage>Usage<a hidden class=anchor aria-hidden=true href=#usage>#</a></h3><pre tabindex=0><code>USAGE:
     dm clone &lt;args&gt;...
 
 FLAGS:
@@ -131,20 +40,12 @@ FLAGS:
 
 ARGS:
     &lt;args&gt;...    Provide either a Git &lt;url&gt; or a Git &lt;host&gt; &lt;owner&gt; &lt;repo&gt;.
-</code></pre><h4 id=clone-by-url>Clone by URL<a hidden class=anchor aria-hidden=true href=#clone-by-url>#</a></h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm clone https://github.com/edfloreshz/devmode
-</code></pre></div><h4 id=clone-without-url>Clone without URL<a hidden class=anchor aria-hidden=true href=#clone-without-url>#</a></h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm clone &lt;host&gt; &lt;owner&gt; &lt;repository&gt;
-</code></pre></div><h4 id=clone-with-configtoml>Clone with <code>config.toml</code><a hidden class=anchor aria-hidden=true href=#clone-with-configtoml>#</a></h4>
-<p>Running <code> dm config</code> asks you to specify your Git <code>host</code> and <code>user</code>, now just type one of your repos.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm clone &lt;repo&gt;
-</code></pre></div><p>You can also clone multiple of your own repositories while using this option.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm clone &lt;repo1&gt; &lt;repo2&gt;
-</code></pre></div><h4 id=just-clone>Just clone<a hidden class=anchor aria-hidden=true href=#just-clone>#</a></h4>
-<p>You can clone without specifying the arguments.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm clone
-</code></pre></div><p>You will be presented with the following setup:</p>
-<pre tabindex=0><code>ᐅ  dm clone
+</code></pre><h4 id=clone-by-url>Clone by URL<a hidden class=anchor aria-hidden=true href=#clone-by-url>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm clone https://github.com/edfloreshz/devmode
+</span></span></code></pre></div><h4 id=clone-without-url>Clone without URL<a hidden class=anchor aria-hidden=true href=#clone-without-url>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm clone &lt;host&gt; &lt;owner&gt; &lt;repository&gt;
+</span></span></code></pre></div><h4 id=clone-with-configtoml>Clone with <code>config.toml</code><a hidden class=anchor aria-hidden=true href=#clone-with-configtoml>#</a></h4><p>Running <code>dm config</code> asks you to specify your Git <code>host</code> and <code>user</code>, now just type one of your repos.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm clone &lt;repo&gt;
+</span></span></code></pre></div><p>You can also clone multiple of your own repositories while using this option.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm clone &lt;repo1&gt; &lt;repo2&gt;
+</span></span></code></pre></div><h4 id=just-clone>Just clone<a hidden class=anchor aria-hidden=true href=#just-clone>#</a></h4><p>You can clone without specifying the arguments.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm clone
+</span></span></code></pre></div><p>You will be presented with the following setup:</p><pre tabindex=0><code>ᐅ  dm clone
 
 ? Choose your Git host: ›
 ❯ GitHub
@@ -153,11 +54,8 @@ ARGS:
 ? Git repo name: › repo
 
 Cloning edfloreshz/blog from GitHub...
-</code></pre><h2 id=clone-and-set-upstream-fork>Clone and set upstream (fork)<a hidden class=anchor aria-hidden=true href=#clone-and-set-upstream-fork>#</a></h2>
-<p>Clone a repo and set upstream, ideal for forks, when you clone a repository it will be stored to your filesystem using a
-specific folder structure. Similar to how <code> dm cl</code> works.</p>
-<h3 id=usage-1>Usage<a hidden class=anchor aria-hidden=true href=#usage-1>#</a></h3>
-<pre tabindex=0><code>    dm fork --upstream &lt;upstream&gt; [args]...
+</code></pre><h2 id=clone-and-set-upstream-fork>Clone and set upstream (fork)<a hidden class=anchor aria-hidden=true href=#clone-and-set-upstream-fork>#</a></h2><p>Clone a repo and set upstream, ideal for forks, when you clone a repository it will be stored to your filesystem using a
+specific folder structure. Similar to how <code>dm cl</code> works.</p><h3 id=usage-1>Usage<a hidden class=anchor aria-hidden=true href=#usage-1>#</a></h3><pre tabindex=0><code>    dm fork --upstream &lt;upstream&gt; [args]...
 
 FLAGS:
     -h, --help       Prints help information
@@ -168,15 +66,9 @@ OPTIONS:
 
 ARGS:
     &lt;args&gt;...    Provide either a Git &lt;url&gt; or a Git &lt;host&gt; &lt;owner&gt; &lt;repo&gt;.
-
-</code></pre><h3 id=clone-with-url>Clone with url<a hidden class=anchor aria-hidden=true href=#clone-with-url>#</a></h3>
-<p>Use the <code>--upstream</code> or <code>-u</code> to set the upstream repository, then specify the repository that you wish to modify.</p>
-<pre tabindex=0><code> dm fork --upstream https://github.com/user/repo https://github.com/your-user/your-repo-fork
-</code></pre><h3 id=clone-with-upstream-url-and-remaining-parameters>Clone with upstream URL and remaining parameters.<a hidden class=anchor aria-hidden=true href=#clone-with-upstream-url-and-remaining-parameters>#</a></h3>
-<pre tabindex=0><code> dm fk github &lt;provider&gt; &lt;user&gt; &lt;forked-repo&gt; -u &lt;url&gt;
-</code></pre><h3 id=just-clone-with-the-upstream-url>Just clone with the upstream URL<a hidden class=anchor aria-hidden=true href=#just-clone-with-the-upstream-url>#</a></h3>
-<p>This will launch a clone setup and guide you throught the cloning process.</p>
-<pre tabindex=0><code> dm fork -u https://github.com/user/repo
+</code></pre><h3 id=clone-with-url>Clone with url<a hidden class=anchor aria-hidden=true href=#clone-with-url>#</a></h3><p>Use the <code>--upstream</code> or <code>-u</code> to set the upstream repository, then specify the repository that you wish to modify.</p><pre tabindex=0><code> dm fork --upstream https://github.com/user/repo https://github.com/your-user/your-repo-fork
+</code></pre><h3 id=clone-with-upstream-url-and-remaining-parameters>Clone with upstream URL and remaining parameters.<a hidden class=anchor aria-hidden=true href=#clone-with-upstream-url-and-remaining-parameters>#</a></h3><pre tabindex=0><code> dm fk github &lt;provider&gt; &lt;user&gt; &lt;forked-repo&gt; -u &lt;url&gt;
+</code></pre><h3 id=just-clone-with-the-upstream-url>Just clone with the upstream URL<a hidden class=anchor aria-hidden=true href=#just-clone-with-the-upstream-url>#</a></h3><p>This will launch a clone setup and guide you throught the cloning process.</p><pre tabindex=0><code> dm fork -u https://github.com/user/repo
 ? Choose your Git host: ›
 ❯ GitHub
   GitLab
@@ -185,10 +77,7 @@ ARGS:
 
 Cloning your-user/your-repo-fork from GitHub...
 Setting https://github.com/user/repo how upstream
-</code></pre><h2 id=open-a-project>Open a project<a hidden class=anchor aria-hidden=true href=#open-a-project>#</a></h2>
-<p>Opens a project with your selected text editor.</p>
-<p>You can also use <code> dm o</code></p>
-<pre tabindex=0><code>USAGE:
+</code></pre><h2 id=open-a-project>Open a project<a hidden class=anchor aria-hidden=true href=#open-a-project>#</a></h2><p>Opens a project with your selected text editor.</p><p>You can also use <code>dm o</code></p><pre tabindex=0><code>USAGE:
     dm open &lt;project&gt;
 
 FLAGS:
@@ -197,30 +86,5 @@ FLAGS:
 
 ARGS:
     &lt;project&gt;    Provide a project name.
-</code></pre><p>You can open a project with the following command:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash> dm open &lt;project&gt;
-</code></pre></div><p>If two or more projects with the same name are found, you will have to choose which one to open.</p>
-<h2 id=proposals>Proposals<a hidden class=anchor aria-hidden=true href=#proposals>#</a></h2>
-<p>If you have a proposal for a new feature, open a new <a href=https://github.com/edfloreshz/devmode/issues>issue</a>.</p>
-</div>
-<footer class=post-footer>
-<nav class=paginav>
-<a class=next href=https://edfloreshz.dev/projects/sensei/>
-<span class=title>Next Page »</span>
-<br>
-<span>Sensei</span>
-</a>
-</nav>
-</footer>
-</article>
-</main>
-<footer class=footer>
-<span>&copy; 2022 <span>&#183;</span> Created by <a href=https://github.com/edfloreshz>Eduardo Flores</a></span>
-</footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a>
-<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+</code></pre><p>You can open a project with the following command:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span> dm open &lt;project&gt;
+</span></span></code></pre></div><p>If two or more projects with the same name are found, you will have to choose which one to open.</p><h2 id=proposals>Proposals<a hidden class=anchor aria-hidden=true href=#proposals>#</a></h2><p>If you have a proposal for a new feature, open a new <a href=https://github.com/edfloreshz/devmode/issues>issue</a>.</p></div><footer class=post-footer><nav class=paginav><a class=next href=https://edfloreshz.dev/projects/sensei/><span class=title>Next Page »</span><br><span>Sensei</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2022 <span>&#183;</span> Created by <a href=https://github.com/edfloreshz>Eduardo Flores</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
