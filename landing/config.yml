@@ -33,7 +33,7 @@ params:
       - name: Blog
         url: https://blog.edfloreshz.dev
       - name: Projects
-        url: https://edfloreshz.dev/projects
+        url: /projects
       - name: Resume
         url: https://resume.edfloreshz.dev
 
